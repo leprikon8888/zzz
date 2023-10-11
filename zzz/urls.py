@@ -4,10 +4,12 @@ from django.urls import path
 from baza import views
 from zzz import settings
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.main_page),
 ]
 
+
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, documents_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
